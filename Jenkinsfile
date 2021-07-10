@@ -10,7 +10,7 @@ stage ('ContinuousBuild')
 }
 stage ('ContinuousDeployment')
 {
- sh 'scp /home/ubuntu/.jenkins/workspace/ScriptPipeline/webapp/target/webapp.war ubuntu@10.3.0.226:/var/lib/tomcat8/webapps/testapp.war'
+ sh 'scp /home/ubuntu/.jenkins/workspace/ScriptPipeline/webapp/target/webapp.war ubuntu@10.3.0.138:/var/lib/tomcat9/webapps/testapp.war'
 }
 stage ('ContinuousTesting')
 {
@@ -19,7 +19,7 @@ stage ('ContinuousTesting')
 }
 stage ('ContinuousDelivery')
 {    
-    sh 'scp /home/ubuntu/.jenkins/workspace/ScriptPipeline/webapp/target/webapp.war ubuntu@10.3.0.139:/var/lib/tomcat8/webapps/prodapp.war'
+    sh 'scp /home/ubuntu/.jenkins/workspace/ScriptPipeline/webapp/target/webapp.war ubuntu@10.3.0.236:/var/lib/tomcat9/webapps/prodapp.war'
 }
 }
 
